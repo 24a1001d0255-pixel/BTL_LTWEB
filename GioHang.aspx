@@ -8,7 +8,7 @@
         <div class="container">
             <h1 class="page-title">Giỏ hàng của bạn</h1>
 
-            <!-- ========== TRẠNG THÁI TRỐNG ========== -->
+           // trạng thái
             <asp:Panel ID="pnlEmpty" runat="server" CssClass="cart-empty" Visible="false">
                 <div class="empty-icon">📚</div>
                 <h2 class="empty-heading">Giỏ hàng của bạn đang trống</h2>
