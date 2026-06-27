@@ -1,0 +1,555 @@
+/* =========================================================
+   BookVerse — Global Layout Styles
+   ========================================================= */
+
+/* ── Reset & Base ── */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, Arial, sans-serif;
+    background-color: #FFFFFF;
+    color: #2E1A0E;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* =========================================================
+   Header
+   ========================================================= */
+.site-header {
+    background: #FFFFFF;
+    border-bottom: 1px solid rgba(107, 58, 42, 0.13);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    padding: 18px 24px;
+}
+
+.brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: #2E1A0E;
+}
+
+.brand-mark {
+    font-size: 28px;
+}
+
+.brand-name {
+    font-family: 'Libre Baskerville', Georgia, serif;
+    font-size: 26px;
+    font-weight: 700;
+    color: #6B3A2A;
+    letter-spacing: 0.3px;
+}
+
+.search-box {
+    flex: 1 1 420px;
+    display: flex;
+    align-items: center;
+    max-width: 640px;
+}
+
+.search-input {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid rgba(107, 58, 42, 0.18);
+    border-right: none;
+    border-radius: 12px 0 0 12px;
+    background: #FDFAF7;
+    font-size: 14px;
+    color: #2E1A0E;
+}
+
+.search-input:focus {
+    outline: 2px solid #6B3A2A;
+    outline-offset: 0;
+    background: #FFFFFF;
+}
+
+.btn-search {
+    padding: 12px 18px;
+    border: 1px solid #6B3A2A;
+    background: #6B3A2A;
+    color: #FFFFFF;
+    border-radius: 0 12px 12px 0;
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.cart-trigger {
+    position: relative;
+    font-size: 24px;
+    padding: 8px;
+    border-radius: 12px;
+    transition: background 0.2s ease;
+}
+
+.cart-trigger:hover {
+    background: #F5EFE8;
+}
+
+.cart-count {
+    position: absolute;
+    top: 2px;
+    right: 0;
+    background: #DC2626;
+    color: #FFFFFF;
+    font-size: 11px;
+    font-weight: 700;
+    line-height: 1;
+    padding: 3px 6px;
+    border-radius: 999px;
+    min-width: 18px;
+    text-align: center;
+}
+
+.btn-login {
+    padding: 10px 18px;
+    border: 2px solid #6B3A2A;
+    border-radius: 12px;
+    color: #6B3A2A;
+    font-weight: 600;
+    background: #FFFFFF;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.btn-login:hover {
+    background: #6B3A2A;
+    color: #FFFFFF;
+}
+
+.account-trigger {
+    width: 42px;
+    height: 42px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #F5EFE8;
+    font-size: 18px;
+}
+
+/* =========================================================
+   Navigation
+   ========================================================= */
+.site-nav {
+    background: #FDFAF7;
+    border-bottom: 1px solid rgba(107, 58, 42, 0.08);
+}
+
+.nav-inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px 24px;
+    flex-wrap: wrap;
+}
+
+.nav-item {
+    position: relative;
+}
+
+.nav-link {
+    display: inline-block;
+    padding: 8px 14px;
+    border-radius: 12px;
+    color: #2E1A0E;
+    font-weight: 500;
+    font-size: 15px;
+    transition: background 0.2s ease;
+}
+
+.nav-link:hover {
+    background: #F5EFE8;
+}
+
+.dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #FFFFFF;
+    border: 1px solid rgba(107, 58, 42, 0.12);
+    border-radius: 14px;
+    box-shadow: 0 10px 25px rgba(46, 26, 14, 0.12);
+    min-width: 200px;
+    padding: 8px;
+    margin-top: 8px;
+    display: none;
+    z-index: 1100;
+}
+
+.nav-item:hover .dropdown {
+    display: block;
+}
+
+.dropdown a {
+    display: block;
+    padding: 10px 14px;
+    border-radius: 10px;
+    color: #2E1A0E;
+    font-size: 14px;
+}
+
+.dropdown a:hover {
+    background: #F5EFE8;
+    color: #6B3A2A;
+}
+
+/* =========================================================
+   Hero
+   ========================================================= */
+.hero {
+    background: linear-gradient(135deg, #FDFAF7 0%, #F5EFE8 100%);
+    border-bottom: 1px solid rgba(107, 58, 42, 0.08);
+}
+
+.hero-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 64px 24px;
+}
+
+.hero-title {
+    font-family: 'Libre Baskerville', Georgia, serif;
+    font-size: clamp(28px, 4vw, 44px);
+    line-height: 1.2;
+    color: #2E1A0E;
+    margin-bottom: 16px;
+}
+
+.hero-subtitle {
+    font-size: 16px;
+    color: #957060;
+    max-width: 520px;
+    margin-bottom: 24px;
+}
+
+.hero-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 20px;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 15px;
+    border: none;
+}
+
+.btn-primary {
+    background: #6B3A2A;
+    color: #FFFFFF;
+}
+
+.btn-primary:hover {
+    background: #8B4513;
+}
+
+.btn-secondary {
+    background: #FFFFFF;
+    color: #6B3A2A;
+    border: 2px solid #6B3A2A;
+}
+
+.btn-secondary:hover {
+    background: #F5EFE8;
+}
+
+.hero-visual {
+    display: none;
+}
+
+.hero-card {
+    width: 240px;
+    background: #FFFFFF;
+    border-radius: 18px;
+    box-shadow: 0 20px 45px rgba(46, 26, 14, 0.18);
+    overflow: hidden;
+}
+
+.hero-card-cover {
+    height: 220px;
+    background: linear-gradient(135deg, #6B3A2A, #8B4513);
+}
+
+.hero-card-body {
+    padding: 16px;
+}
+
+.hero-card-title {
+    font-weight: 600;
+    color: #2E1A0E;
+}
+
+.hero-card-meta {
+    font-size: 13px;
+    color: #957060;
+}
+
+/* =========================================================
+   Main Content
+   ========================================================= */
+.site-main {
+    flex: 1 0 auto;
+    padding: 36px 0 56px;
+}
+
+/* =========================================================
+   Footer
+   ========================================================= */
+.site-footer {
+    background: #2E1A0E;
+    color: #F5EFE8;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 28px;
+    padding: 40px 24px;
+}
+
+.footer-col h4 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 14px;
+    color: #FFFFFF;
+}
+
+.footer-col p {
+    font-size: 14px;
+    color: rgba(245, 239, 232, 0.85);
+}
+
+.footer-col a {
+    display: block;
+    font-size: 14px;
+    color: rgba(245, 239, 232, 0.85);
+    margin-bottom: 10px;
+    transition: color 0.2s ease;
+}
+
+.footer-col a:hover {
+    color: #FFFFFF;
+}
+
+.copyright {
+    border-top: 1px solid rgba(245, 239, 232, 0.15);
+    padding: 16px 24px;
+    text-align: center;
+    font-size: 13px;
+    color: rgba(245, 239, 232, 0.7);
+}
+
+/* =========================================================
+   Utilities
+   ========================================================= */
+.text-muted {
+    color: #957060;
+}
+
+.mt-24 {
+    margin-top: 24px;
+}
+
+/* =========================================================
+   Book components
+   ========================================================= */
+.book-card {
+    background: #FDFAF7;
+    border: 1px solid rgba(107, 58, 42, 0.1);
+    border-radius: 16px;
+    overflow: hidden;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.book-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 18px 35px rgba(46, 26, 14, 0.12);
+}
+
+.book-cover {
+    width: 100%;
+    aspect-ratio: 2 / 3;
+    object-fit: cover;
+    display: block;
+    background: #F5EFE8;
+}
+
+.book-body {
+    padding: 16px;
+}
+
+.book-title {
+    font-family: 'Libre Baskerville', Georgia, serif;
+    font-size: 15px;
+    font-weight: 700;
+    color: #2E1A0E;
+    line-height: 1.35;
+    margin-bottom: 6px;
+}
+
+.book-meta {
+    font-size: 13px;
+    color: #957060;
+    margin-bottom: 12px;
+}
+
+.book-price {
+    font-weight: 700;
+    color: #6B3A2A;
+    font-size: 16px;
+    margin-bottom: 12px;
+}
+
+.btn-add-cart {
+    width: 100%;
+    padding: 10px;
+    border-radius: 12px;
+    border: 1px solid #6B3A2A;
+    background: #FFFFFF;
+    color: #6B3A2A;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.btn-add-cart:hover {
+    background: #6B3A2A;
+    color: #FFFFFF;
+}
+
+/* =========================================================
+   Responsive
+   ========================================================= */
+@media (min-width: 960px) {
+    .hero-visual {
+        display: block;
+    }
+}
+
+@media (max-width: 992px) {
+    .header-inner {
+        gap: 16px;
+    }
+
+    .search-box {
+        max-width: 100%;
+    }
+
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .header-inner {
+        flex-wrap: wrap;
+    }
+
+    .brand {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .search-box {
+        width: 100%;
+        order: 3;
+    }
+
+    .header-actions {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .nav-inner {
+        justify-content: flex-start;
+        overflow-x: auto;
+        white-space: nowrap;
+        padding-bottom: 12px;
+    }
+
+    .nav-item {
+        display: inline-block;
+    }
+
+    .dropdown {
+        position: static;
+        box-shadow: none;
+        border: none;
+        background: #FDFAF7;
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    html, body {
+        overflow-x: hidden;
+    }
+
+    .header-inner {
+        padding: 14px 16px;
+    }
+
+    .btn-login {
+        padding: 10px 14px;
+        font-size: 14px;
+    }
+
+    .btn-search {
+        padding: 10px 14px;
+        font-size: 14px;
+    }
+
+    .hero-inner {
+        padding: 40px 18px;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+}

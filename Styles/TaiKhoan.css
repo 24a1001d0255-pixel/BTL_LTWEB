@@ -1,0 +1,251 @@
+/* =========================================================
+   BookVerse — Tài Khoản Cá Nhân Styles
+   ========================================================= */
+
+.page-account {
+    padding: 28px 0 48px;
+}
+
+.page-title {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, Arial, sans-serif;
+    font-size: 28px;
+    color: #2E1A0E;
+    margin-bottom: 24px;
+}
+
+.account-layout {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: 24px;
+    align-items: start;
+}
+
+/* ========== PROFILE CARD ========== */
+.account-card {
+    background: #FDFAF7;
+    border: 1px solid rgba(107, 58, 42, 0.12);
+    border-radius: 20px;
+    padding: 24px;
+    text-align: center;
+    position: sticky;
+    top: 96px;
+}
+
+.avatar {
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    background: #F5EFE8;
+    border: 1px solid rgba(107, 58, 42, 0.15);
+    margin: 0 auto 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.avatar-fallback {
+    font-size: 40px;
+}
+
+.account-info {
+    margin-bottom: 18px;
+}
+
+.account-name {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, Arial, sans-serif;
+    font-size: 18px;
+    color: #2E1A0E;
+    margin-bottom: 8px;
+}
+
+.account-meta {
+    font-size: 14px;
+    color: #5c3d2e;
+    margin-bottom: 4px;
+    word-break: break-word;
+}
+
+/* ========== ORDER HISTORY ========== */
+.order-history {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.section-heading {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, Arial, sans-serif;
+    font-size: 18px;
+    color: #2E1A0E;
+    margin-bottom: 4px;
+}
+
+.order-empty {
+    background: #FDFAF7;
+    border: 1px dashed rgba(107, 58, 42, 0.25);
+    border-radius: 16px;
+    padding: 32px;
+    text-align: center;
+    font-size: 15px;
+    color: #5c3d2e;
+}
+
+.order-card {
+    background: #FDFAF7;
+    border: 1px solid rgba(107, 58, 42, 0.1);
+    border-radius: 16px;
+    padding: 18px;
+}
+
+.order-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(107, 58, 42, 0.08);
+}
+
+.order-title {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.order-id {
+    font-weight: 700;
+    color: #2E1A0E;
+    font-size: 15px;
+}
+
+.order-date {
+    font-size: 13px;
+    color: #957060;
+}
+
+.order-status {
+    font-size: 13px;
+    font-weight: 600;
+    padding: 6px 10px;
+    border-radius: 999px;
+    background: #F5EFE8;
+    color: #6B3A2A;
+    border: 1px solid rgba(107, 58, 42, 0.15);
+    white-space: nowrap;
+}
+
+.status-processing {
+    background: #FFF7ED;
+    color: #B45309;
+    border-color: rgba(180, 83, 9, 0.25);
+}
+
+.status-shipping {
+    background: #EFF6FF;
+    color: #1D4ED8;
+    border-color: rgba(29, 78, 216, 0.25);
+}
+
+.status-completed {
+    background: #ECFDF5;
+    color: #047857;
+    border-color: rgba(4, 120, 87, 0.25);
+}
+
+.order-body {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.order-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+}
+
+.order-label {
+    font-size: 14px;
+    color: #5c3d2e;
+}
+
+.order-value {
+    font-size: 14px;
+    font-weight: 600;
+    color: #2E1A0E;
+}
+
+/* ========== BUTTONS ========== */
+.btn {
+    display: inline-block;
+    padding: 10px 16px;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    text-align: center;
+    border: none;
+    line-height: 1.4;
+    transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.btn-update {
+    width: 100%;
+    background: #6B3A2A;
+    color: #FFFFFF;
+}
+
+.btn-update:hover {
+    background: #8B4513;
+}
+
+/* =========================================================
+   Responsive
+   ========================================================= */
+@media (max-width: 992px) {
+    .account-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .account-card {
+        position: static;
+        text-align: left;
+        display: grid;
+        grid-template-columns: 96px 1fr;
+        gap: 18px;
+        align-items: center;
+    }
+
+    .avatar {
+        margin: 0;
+    }
+
+    .btn-update {
+        grid-column: 1 / -1;
+    }
+}
+
+@media (max-width: 480px) {
+    .page-title {
+        font-size: 22px;
+    }
+
+    .page-account {
+        padding: 18px 0 36px;
+    }
+
+    .account-card {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .avatar {
+        margin: 0 auto;
+    }
+
+    .order-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

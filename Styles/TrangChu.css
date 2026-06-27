@@ -1,0 +1,119 @@
+/* =========================================================
+   BookVerse — Trang Chủ Styles
+   ========================================================= */
+
+.page-home {
+    padding: 28px 0 40px;
+}
+
+.section-title {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, Arial, sans-serif;
+    font-size: 24px;
+    color: #2E1A0E;
+    margin-bottom: 18px;
+}
+
+.book-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 22px;
+}
+
+.book-card {
+    background: #FDFAF7;
+    border: 1px solid rgba(107, 58, 42, 0.1);
+    border-radius: 16px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.book-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 18px 35px rgba(46, 26, 14, 0.12);
+}
+
+.book-link {
+    display: block;
+}
+
+.book-cover {
+    width: 100%;
+    aspect-ratio: 2 / 3;
+    object-fit: cover;
+    display: block;
+    background: #F5EFE8;
+}
+
+.book-body {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex: 1;
+}
+
+.book-title {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, Arial, sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    color: #2E1A0E;
+    line-height: 1.35;
+}
+
+.book-title a {
+    color: inherit;
+}
+
+.book-meta {
+    font-size: 13px;
+    color: #957060;
+    margin: 0;
+}
+
+.book-price {
+    font-weight: 700;
+    color: #6B3A2A;
+    font-size: 16px;
+    margin: 0;
+}
+
+.btn-add-cart {
+    width: 100%;
+    padding: 10px;
+    border-radius: 12px;
+    border: 1px solid #6B3A2A;
+    background: #FFFFFF;
+    color: #6B3A2A;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: auto;
+}
+
+.btn-add-cart:hover {
+    background: #6B3A2A;
+    color: #FFFFFF;
+}
+
+@media (max-width: 768px) {
+    .book-grid {
+        grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+        gap: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-title {
+        font-size: 20px;
+    }
+
+    .book-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .book-body {
+        padding: 12px;
+    }
+}
