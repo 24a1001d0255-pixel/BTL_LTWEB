@@ -8,7 +8,6 @@
         <div class="container">
             <h1 class="page-title">Giỏ hàng của bạn</h1>
 
-           == trạng thái
             <asp:Panel ID="pnlEmpty" runat="server" CssClass="cart-empty" Visible="false">
                 <div class="empty-icon">📚</div>
                 <h2 class="empty-heading">Giỏ hàng của bạn đang trống</h2>
@@ -16,9 +15,8 @@
                 <a href="TrangChu.aspx" class="btn btn-continue">Tiếp tục mua sắm</a>
             </asp:Panel>
 
-            <!-- ========== GIỎ HÀNG CÓ SẢN PHẨM ========== -->
             <asp:Panel ID="pnlCart" runat="server" CssClass="cart-layout">
-                <!-- DANH SÁCH SẢN PHẨM -->
+      
                 <div class="cart-items">
                     <div class="cart-table-wrap">
                         <table class="cart-table">
@@ -89,7 +87,6 @@
                     </div>
                 </div>
 
-                <!-- TỔNG QUAN ĐƠN HÀNG -->
                 <aside class="order-summary">
                     <h2 class="summary-heading">Tổng quan đơn hàng</h2>
 
