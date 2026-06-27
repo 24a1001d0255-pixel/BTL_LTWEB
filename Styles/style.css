@@ -251,7 +251,7 @@ a {
 }
 
 .hero-title {
-    font-family: 'Libre Baskerville', Georgia, serif;
+   font-family: 'Lora', Georgia, serif;
     font-size: clamp(28px, 4vw, 44px);
     line-height: 1.2;
     color: #2E1A0E;
